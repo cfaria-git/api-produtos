@@ -33,7 +33,6 @@ produtos = [
 def exibirProdutos():
     return jsonify(produtos)
 
-
 #Criar uma rota para o metodo POST (Criar um produto)
 @app.route("/criar", methods=['POST'])
 def criarProduto():
@@ -60,7 +59,6 @@ def deletarProduto(id):
             produtos.remove(produto)
             return jsonify({"messagem": "Produto deletado com sucesso"}), 200
     return jsonify({"message": "Produto não encontrado"}), 404
-
 
 
 #Rodar o programa
